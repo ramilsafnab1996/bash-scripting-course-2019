@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# автор: Рамиль Сафин
+# группа: 11-831
+# вариант: 1
+
 guessed_right=0
 guessed_wrong=0
 
