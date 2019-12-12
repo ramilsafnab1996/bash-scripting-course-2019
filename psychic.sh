@@ -8,11 +8,11 @@ while [[ true ]]; do
 		
 	read -p "Какое число от 0 до 9 загадано сейчас (q - закончить)?: " input
 
-	[[ $input == 'q' ]] && { echo "Все, ухожу!"; exit 0; }
+	[[ "${input}" == 'q' ]] && { echo "Все, ухожу!"; exit 0; }
 
-	[[ $input =~ ^[0-9]$ ]] || { echo "Введите корректное число от 0 до 9!"; continue; }
+	[[ "${input}" =~ ^[0-9]$ ]] || { echo "Введите корректное число от 0 до 9!"; continue; }
 
-	if (( $input == rnd )); then
+	if (( "${input}" == rnd )); then
 		guessed_right=$((guessed_right+1))
 		echo "Угадали!"
 	else
